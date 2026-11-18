@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elon Musk Tracker</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 2px solid #00d4ff;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #00d4ff;
+        }
+        header p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 10px auto;
+        }
+        .hero-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 20px auto;
+            display: block;
+            border: 3px solid #00d4ff;
+            object-fit: cover;
+        }
+        nav {
+            background: #111;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #00d4ff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        h2 {
+            color: #00d4ff;
+            border-bottom: 2px solid #00d4ff;
+            padding-bottom: 10px;
+        }
+        .content-item {
+            background: #1a1a1a;
+            border-left: 4px solid #00d4ff;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+        .content-item h3 {
+            margin-top: 0;
+            color: #fff;
+        }
+        .meta {
+            color: #aaa;
+            font-size: 0.9em;
+        }
+        .views {
+            color: #00ff88;
+            font-weight: bold;
+        }
+        .chart-container {
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #111;
+            color: #666;
+            font-size: 0.9em;
+        }
+        a {
+            color: #00d4ff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://cdn.britannica.com/05/236505-050-17B6E34A/Elon-Musk-2022.jpg" alt="Elon Musk" class="hero-img">
+        <h1>Elon Musk Tracker</h1>
+        <p>Latest interviews, events, news releases, and analysis of major topics discussed over the last five years. Updated as of November 18, 2026.</p>
+    </header>
+    <nav>
+        <a href="#latest">Latest Content</a>
+        <a href="#topics">Topics Chart</a>
+        <a href="#news">News Releases</a>
+        <a href="https://x.com/elonmusk" target="_blank">Follow on X</a>
+    </nav>
+
+    <section id="latest">
+        <h2>Latest Content (Prioritized by Views)</h2>
+        <p>Events, interviews, and appearances sorted approximately by public viewership/engagement. Includes all recent items.</p>
+
+        <div class="content-item">
+            <h3>The Full-Length Interview with Elon Musk | The Economist</h3>
+            <div class="meta">July 23, 2026 | Host: Zanny Minton Beddoes | <span class="views">~8.2 million views</span></div>
+            <p>Wide-ranging discussion on AI surpassing human intelligence in ~5 years, age of abundance by 2036, AI safety and peer review among companies, China's progress, Starlink in Ukraine, DOGE and politics ("got too involved"), immigration, and more. Recorded at Tesla Gigafactory.</p>
+            <a href="https://www.youtube.com/watch?v=XuoqKYxDHVc" target="_blank">Watch on YouTube</a> | 
+            <a href="https://www.economist.com/insider/the-insider/an-interview-with-elon-musk" target="_blank">The Economist</a>
+        </div>
+
+        <div class="content-item">
+            <h3>Baron Investment Conference 2026 – Fireside with Ron Baron</h3>
+            <div class="meta">November 6, 2026 | Topics: Terafab, Starship, Data Centers in Space, Optimus, Universal High Income</div>
+            <p>Detailed discussion on the massive Terafab chip facility plans, xAI data centers, SpaceX revenue, robotics productivity (5x humans), Starship catches, Starlink upgrades, China, and universal high income future.</p>
+            <a href="https://x.com/elonmusk/status/2118850719944212645" target="_blank">Related on X</a>
+        </div>
+
+        <div class="content-item">
+            <h3>The Builders with Walter Isaacson</h3>
+            <div class="meta">October 20, 2026 | Biographer interview</div>
+            <p>On superintelligence ("humans won't be in control"), making AI maximally truth-seeking, the simulation, OpenAI/Anthropic, year in government, Optimus and post-work world, empathy, immigration, fortune, and consciousness.</p>
+        </div>
+
+        <div class="content-item">
+            <h3>Elon Musk, Jensen Huang & JD Vance / AI Panel</h3>
+            <div class="meta">November 12, 2026 | CNBC-TV18 and related</div>
+            <p>Discussions on AI's future, NVIDIA, Starlink, energy demands.</p>
+        </div>
+
+        <div class="content-item">
+            <h3>All-In Podcast with Gwynne Shotwell</h3>
+            <div class="meta">September 15, 2026</div>
+            <p>AI risks, peer review, Starship, Terafab, possible SpaceX/Tesla merger, and more.</p>
+        </div>
+
+        <div class="content-item">
+            <h3>Interview with CCTV (China Media Group)</h3>
+            <div class="meta">September 25, 2026</div>
+            <p>China impressions, Giga Shanghai, Cybercab, AI pace, Optimus, universal high income, Mars, Neuralink, education.</p>
+        </div>
+
+        <div class="content-item">
+            <h3>G20 Innovation Ministerial Summit Remarks</h3>
+            <div class="meta">September 1, 2026 | North Carolina</div>
+            <p>On innovation, self-driving, humanoid robotics scale (billion robots, 5x productivity), AI economy boost 20-30%, power shortfalls for chips.</p>
+        </div>
+
+        <div class="content-item">
+            <h3>Recent Videos & Appearances (Nov 2026)</h3>
+            <div class="meta">Nov 10-17, 2026</div>
+            <ul>
+                <li>Elon Musk: By 2030 Humans Will No Longer Be Needed (Nov 17)</li>
+                <li>How to Win the Simulation (Nov 14)</li>
+                <li>AI Singularity Will Rewrite Human Civilization by 2036 (Nov 10)</li>
+                <li>X Takeover 2026 (Oct 10)</li>
+                <li>Tesla Roadster Event (Oct 15)</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="topics">
+        <h2>Major Topics Discussed (Last 5 Years: 2021–2026)</h2>
+        <p>Approximate relative frequency based on analyses of X/Twitter posts, interviews, and public appearances. Politics and free speech surged after the Twitter acquisition in 2022. AI/robotics discussion has risen sharply with xAI and Optimus. Company topics (Tesla, SpaceX) remain consistent. Data is qualitative/approximate from public reports (WSJ, WaPo, NBC, academic analyses).</p>
+        <div class="chart-container">
+            <canvas id="topicsChart"></canvas>
+        </div>
+        <p><strong>Key trends:</strong> Free speech and political commentary (immigration, media, government efficiency/DOGE, elections) became dominant post-2022. AI, superintelligence, and humanoid robotics (Optimus) are now central, with predictions of abundance and post-work society. Space exploration (Starship, Mars, orbital data centers) and energy/chip manufacturing (Terafab) are recurring technical focuses.</p>
+    </section>
+
+    <section id="news">
+        <h2>Recent News Releases & Developments</h2>
+        <div class="content-item">
+            <h3>Starship Progress</h3>
+            <div class="meta">November 2026</div>
+            <p>SpaceX launched the 15th Starship flight aiming for first round-trip to orbit and catch. Successful catch of Starship at Texas site – major step for full reusability toward Mars.</p>
+        </div>
+        <div class="content-item">
+            <h3>Cybertruck Production Update</h3>
+            <div class="meta">Early November 2026</div>
+            <p>Tesla to wind down Cybertruck production around mid-2027 due to weak sales, though Musk noted extension through end of summer 2027 for backlog.</p>
+        </div>
+        <div class="content-item">
+            <h3>AI & Robotics Statements</h3>
+            <div class="meta">November 2026</div>
+            <p>Musk stated there is at least some percentage chance of AI being an existential threat and "nothing he can do to stop it." Continued advocacy for universal high income and abundance via AI/robots. Data centers in space (StarMind) plans.</p>
+        </div>
+        <div class="content-item">
+            <h3>xAI & Colossus / Terafab</h3>
+            <div class="meta">Ongoing 2026</div>
+            <p>Massive chip fabrication ambitions (Terafab for terawatt-scale AI chips), orbital compute, and community benefits from data centers (e.g., Memphis).</p>
+        </div>
+        <div class="content-item">
+            <h3>Latest on X</h3>
+            <div class="meta">November 18, 2026</div>
+            <p>Active posting, including lighthearted and company-related content. Follow <a href="https://x.com/elonmusk" target="_blank">@elonmusk</a> for real-time updates. Recent high-engagement posts include references to Boring Company and general commentary.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>Elon Musk Tracker | Data compiled from public sources including Elon Musk Archive, YouTube, X, news reports as of November 18, 2026. Not affiliated with Elon Musk or his companies. Chart data is approximate based on available analyses of posting frequency and interview themes.</p>
+        <p>Sources include analyses from WSJ, Washington Post, NBC News, and public archives.</p>
+    </footer>
+
+    <script>
+        const ctx = document.getElementById('topicsChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['2021', '2022', '2023', '2024', '2025', '2026'],
+                datasets: [
+                    {
+                        label: 'Politics, Free Speech & Government',
+                        data: [15, 40, 55, 70, 65, 60],
+                        borderColor: '#ff6b6b',
+                        backgroundColor: 'rgba(255, 107, 107, 0.1)',
+                        tension: 0.3
+                    },
+                    {
+                        label: 'AI, Robotics & Superintelligence',
+                        data: [20, 25, 35, 50, 70, 85],
+                        borderColor: '#00d4ff',
+                        backgroundColor: 'rgba(0, 212, 255, 0.1)',
+                        tension: 0.3
+                    },
+                    {
+                        label: 'Tesla / EVs / Optimus',
+                        data: [60, 55, 50, 45, 40, 45],
+                        borderColor: '#00ff88',
+                        backgroundColor: 'rgba(0, 255, 136, 0.1)',
+                        tension: 0.3
+                    },
+                    {
+                        label: 'SpaceX, Starship & Mars',
+                        data: [50, 45, 40, 45, 55, 60],
+                        borderColor: '#ffd93d',
+                        backgroundColor: 'rgba(255, 217, 61, 0.1)',
+                        tension: 0.3
+                    },
+                    {
+                        label: 'Energy, Chips & Data Centers',
+                        data: [10, 15, 20, 30, 50, 70],
+                        borderColor: '#c084fc',
+                        backgroundColor: 'rgba(192, 132, 252, 0.1)',
+                        tension: 0.3
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Approximate Relative Frequency of Major Topics (Higher = More Frequent)',
+                        color: '#e0e0e0'
+                    },
+                    legend: {
+                        labels: { color: '#e0e0e0' }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: { display: true, text: 'Relative Frequency Index', color: '#e0e0e0' },
+                        ticks: { color: '#aaa' },
+                        grid: { color: '#333' }
+                    },
+                    x: {
+                        ticks: { color: '#aaa' },
+                        grid: { color: '#333' }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
